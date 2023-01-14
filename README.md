@@ -1,6 +1,5 @@
 # Central Limit Theorem
 
-## Instructions:
 Adding a large number of values from almost any distribution converges the distribution of the sum to a normal distribution. More specifically, if the distribution of values has a mean and standard deviation μ and σ, then the distribution of the sum is approximately N(nμ,n(σ^2)). This is called the central limit theorem. ##Condition:
 
 
