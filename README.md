@@ -1,42 +1,27 @@
-# Central_Limit_Theorem
+# Central Limit Theorem
 
 ## Instructions:
-If we add up a large number of values from almost any distribution, the distribution of the sum
-converges to normal. More specifically, if the distribution of the values has mean and standard
-deviation μ and σ, the distribution of the sum is approximately N(n*μ, n*(σ^2)). This is called the Central
-Limit Theorem.
-##Conditions :
-- The values have to be drawn independently.
--The values have to come from the same distribution (although this requirement can be
-relaxed).
-- The values have to be drawn from a distribution with finite mean and variance.
-- The number of values you need before you see convergence depends on the skewness of the
-distribution.
+Adding a large number of values from almost any distribution converges the distribution of the sum to a normal distribution. More specifically, if the distribution of values has a mean and standard deviation μ and σ, then the distribution of the sum is approximately N(nμ,n(σ^2)). This is called the central limit theorem. ##Condition:
 
-The Central Limit Theorem explains, at least in part, the prevalence of normal distributions in the
-natural world . Most characteristics of animals and other life forms are affected by a large number of
-genetic and environmental factors whose effect is additive. The characteristics we measure are the
-sum of a large number of small effects, so their distribution tends to be normal. Another example can
-be the weight of a bag of potato chips which is actually the sum of the weights of many small
-independent contributions from each single chip.
 
-In this assignment, you are going to simulate and observe the impact of number of values added up
-and the result when independent and identical sampling conditions are ignored. For this purpose, you
-need to implement 5 different experimental setups as the following:
-- Experiment 1: 2 values are sampled independently from a standard uniform distribution and summed.
-- Experiment 2: 4 values are sampled independently from a standard uniform distribution and summed.
-- Experiment 3: 50 values are sampled independently from a standard uniform distribution and summed
-- Experiment 4: 50 values are sampled dependently from a uniform distribution and summed.
-Dependence is introduced by the following rule: If a value is smaller than 99, the next value is sampled
-from a uniform distribution between 0 and 200, otherwise between 99 and 101.
-Experiment 5: 50 values are sampled independently from different uniform distributions and summed.
-For each value generation, the uniform distribution parameters (a and b-a) should be sampled from a
-standard uniform distribution.
+The values should be drawn independently of each other. -Values must come from the same distribution (although this requirement can be relaxed). The values ​​should come from a distribution with finite mean and variance.
+The number of values required to see convergence depends on the skewness of the distribution.
+The central limit theorem explains, at least in part, the prevalence of normal distributions in nature. Most traits of animals and other living organisms are influenced by various genetic and environmental factors, the effects of which are additive. Since the features we measure are the sum of many small effects, their distribution tends to be normalized. Another example is the weight of a bag of potato chips. This is actually the sum of the weights of many small independent contributions from each chip.
 
-For each experiment, generate 200000 sums and create a pyplot figure which includes their
-normalized histograms and the theoretical normal distribution curve. Implement and use your own
-normal probability density function. For experiment 1, 2 and 3, calculate the theoretical mean and
-variance for the distribution of the sums and implement it explicitly. For experiment 4 and 5, estimate
-the mean and variance for the distribution of the sums by calculating them on the created sample set.
-In order to draw samples from a uniform distribution, you can use numpy.random.uniform()
-function.
+In this task, we simulate and observe the effect of the number of total values and the consequences of ignoring independent and identical sampling conditions. For this purpose, five different experimental setups should be implemented as follows:
+
+Attempt 1:
+Two values are sampled and summed independently of the uniform standard distribution.
+
+Attempt 2:
+Four values are sampled and summed independently of the uniform standard distribution.
+
+Attempt 3:
+50 values are sampled and summed independently of the uniform standard distribution
+
+Attempt 4:
+50 values are sampled and summed according to the uniform distribution. Dependencies are introduced by the following rules:
+If the value is less than 99, the next value is sampled from a uniform distribution between 0 and 200, otherwise between 99 and 101. Experiment 5:
+50 values are sampled and summed independently of the various uniform distributions. Each time you generate a value, the uniform parameters (a and b-a) should be sampled from a standard uniform distribution.
+
+For each experiment, we generate 200000 totals and create a pyplot figure containing their normalized histograms and the theoretical normal distribution curve. Implement and use your own normal probability density function. Experiments 1, 2 and 3 compute the theoretical mean and variance of the sum distribution and implement them explicitly. Experiments 4 and 5 estimate the mean and variance of the total distribution by performing calculations using the created sample set. To sample from a uniform distribution you can use the numpy.random.uniform() function.
